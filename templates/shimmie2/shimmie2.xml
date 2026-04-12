@@ -15,6 +15,6 @@ This template uses an integrated SQLite database for easy setup</Overview>
   <WebUI>http://[IP]:[PORT:8000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Saetron/unRAID-CA-templates/refs/heads/main/templates/shimmie2/shimmie2.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/shish/shimmie2/refs/heads/main/ext/static_files/static/favicon_64.png</Icon>
-  <Config Name="Config" Target="/app/data" Default="/mnt/user/appdata/shimmie2" Mode="rw" Description="Core application data and SQLite database." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/shimmie2</Config>
+  <Config Name="Config" Target="/app/data" Default="/mnt/user/appdata/shimmie2" Mode="rw" Description="Core application data and SQLite database." Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/shimmie2</Config>
   <Config Name="WebUI" Target="8000" Default="8000" Mode="tcp" Description="Web interface port." Type="Port" Display="always" Required="true" Mask="false">8000</Config>
 </Container>
