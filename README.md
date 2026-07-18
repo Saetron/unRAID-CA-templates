@@ -9,6 +9,6 @@
 
 ## Support
 
-If you encounter issues with these templates or have suggestions for new ones, please visit my [Official Support Thread](https://forums.unraid.net/topic/197096-support-saetron-docker-templates/) on the Unraid Forums. 
+If you encounter issues with these templates or have suggestions for new ones, please visit my [Official Support Thread](https://forums.unraid.net/topic/197096-support-saetron-docker-templates/) on the Unraid Forums.
 
 Please do not open GitHub Issues for template configuration questions; the forum is the best place for community troubleshooting.
