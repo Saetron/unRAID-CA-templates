@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Drop-OSS</Name>
+  <Repository>ghcr.io/drop-oss/drop:0.4.0-rc-5</Repository>
+  <Registry>https://github.com/Drop-OSS/drop/pkgs/container/drop</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/197096-support-saetron-docker-templates/</Support>
+  <Project>https://github.com/Drop-OSS/drop</Project>
+  <Overview>Drop is an open-source game distribution platform, similar to GameVault or Steam. It's designed to distribute and share DRM-free games quickly, all while being incredibly flexible, beautiful, and fast.</Overview>
+  <Category>MediaApp:Other</Category>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Saetron/unRAID-CA-templates/refs/heads/main/templates/drop-oss/drop-oss.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Drop-OSS/drop/refs/heads/main/assets/favicon_64.png</Icon>
+    <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="postgres://drop:drop@postgres:5432/drop" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">postgres://drop:drop@postgres:5432/drop</Config>
+  <Config Name="EXTERNAL_URL" Target="EXTERNAL_URL" Default="http://localhost:3000" Mode="" Description="Customise if accessing from another computer or behind a reverse proxy" Type="Variable" Display="always" Required="true" Mask="false">http://localhost:3000</Config>
+  <Config Name="Config" Target="/data" Default="/mnt/user/appdata/drop" Mode="rw" Description="Core application data." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/drop</Config>
+  <Config Name="Games" Target="/library" Default="/mnt/user/games" Mode="rw" Description="Games directory." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/games</Config>
+  <Config Name="WebUI" Target="3000" Default="3000" Mode="tcp" Description="Web interface port." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+</Container>
