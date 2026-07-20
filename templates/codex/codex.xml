@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Codex</Name>
+  <Repository>ghcr.io/ajslater/codex</Repository>
+  <Registry>https://github.com/ajslater/codex/pkgs/container/codex</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/197096-support-saetron-docker-templates/</Support>
+  <Project>https://github.com/ajslater/codex</Project>
+  <Overview>Codex is a web server comic book browser and reader.</Overview>
+  <Category>MediaApp:Books</Category>
+  <WebUI>http://[IP]:[PORT:9810]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Saetron/unRAID-CA-templates/refs/heads/main/templates/codex/codex.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Saetron/unRAID-CA-templates/refs/heads/main/templates/codex/codex.png</Icon>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/codex" Mode="rw" Description="Core application data." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/codex</Config>
+  <Config Name="Comics" Target="/comics" Default="/mnt/user/comics" Mode="ro" Description="Comics directory." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/comics</Config>
+  <Config Name="WebUI" Target="9810" Default="9810" Mode="tcp" Description="Web interface port." Type="Port" Display="always" Required="true" Mask="false">9810</Config>
+</Container>
