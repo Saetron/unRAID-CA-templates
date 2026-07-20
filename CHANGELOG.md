@@ -1,5 +1,5 @@
 ### 2026.07.20
-- Added Drop OSS
+- Added Drop OSS & Codex
 ### 2026.07.18
 - Added Pre Commit Scripts for a unified layout.
 ### 2026.02.09
