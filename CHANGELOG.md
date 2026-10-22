@@ -1,3 +1,5 @@
+### 2026.10.22
+- Updated Drop OSS version
 ### 2026.07.20
 - Added Drop OSS & Codex
 ### 2026.07.18
