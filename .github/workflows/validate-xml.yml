@@ -1,0 +1,64 @@
+name: Validate Unraid XML Templates
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.xml"
+      - ".github/unraid-template-v2.xsd"
+      - ".github/scripts/validate_templates.py"
+      - ".github/workflows/validate-xml.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "**/*.xml"
+      - ".github/unraid-template-v2.xsd"
+      - ".github/scripts/validate_templates.py"
+      - ".github/workflows/validate-xml.yml"
+  workflow_dispatch:
+
+jobs:
+  validate-xml:
+    name: Validate XML Templates
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Find changed or added XML files
+        id: changed-xml
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            FILES=$(git diff --name-only --diff-filter=ACMR "${{ github.event.pull_request.base.sha }}" "${{ github.sha }}" -- '*.xml' || true)
+          elif [ "${{ github.event_name }}" = "push" ] && [ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ]; then
+            FILES=$(git diff --name-only --diff-filter=ACMR "${{ github.event.before }}" "${{ github.sha }}" -- '*.xml' || true)
+          else
+            FILES=""
+          fi
+          if [ -z "$FILES" ]; then
+            FILES=$(find templates -type f -name "*.xml" | sort)
+          fi
+          echo "files<<EOF" >> "$GITHUB_OUTPUT"
+          echo "$FILES" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+          echo "Validating XML files:"
+          echo "$FILES"
+
+      - name: Validate against Unraid v2 XSD Schema (xmllint)
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq libxml2-utils
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            xmllint --noout --schema .github/unraid-template-v2.xsd "$file"
+          done <<< "${{ steps.changed-xml.outputs.files }}"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate Unraid Community Applications rules
+        run: |
+          xargs -r python3 .github/scripts/validate_templates.py <<< "${{ steps.changed-xml.outputs.files }}"
