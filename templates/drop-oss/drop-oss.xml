@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Drop-OSS</Name>
-  <Repository>ghcr.io/drop-oss/drop:0.4.0-rc-5</Repository>
+  <Repository>ghcr.io/drop-oss/drop:0.4.0-rc-6</Repository>
   <Registry>https://github.com/Drop-OSS/drop/pkgs/container/drop</Registry>
   <Network>bridge</Network>
   <Shell>sh</Shell>
