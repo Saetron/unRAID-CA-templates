@@ -8,7 +8,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/197096-support-saetron-docker-templates/</Support>
   <Project>https://github.com/ajslater/codex</Project>
-  <Overview>Codex is a web server comic book browser and reader.</Overview>
+  <Overview>Codex is a lightweight, web-based comic book library server and reader. It allows you to organize, browse, and read your digital comic collection (CBZ, CBR, etc.) directly in any modern browser without needing client software.</Overview>
   <Category>MediaApp:Books</Category>
   <WebUI>http://[IP]:[PORT:9810]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Saetron/unRAID-CA-templates/refs/heads/main/templates/codex/codex.xml</TemplateURL>

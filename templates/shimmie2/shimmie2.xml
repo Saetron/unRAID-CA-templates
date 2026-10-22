@@ -8,9 +8,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/197096-support-saetron-docker-templates/</Support>
   <Project>https://github.com/shish/shimmie2</Project>
-  <Overview>Shimmie2 is a lightweight, tag-based image gallery engine. It features a robust extension system, advanced metadata tagging, and a community-focused "Booru" style interface for organizing large image collections. &#13;
-&#13;
-This template uses an integrated SQLite database for easy setup</Overview>
+  <Overview>Shimmie2 is a lightweight, tag-based image gallery and "Booru"-style media board designed for cataloging large collections of images and artwork. &#13;&#13;This template is pre-configured with an integrated SQLite database for quick, zero-setup deployment without needing an external database server.</Overview>
   <Category>MediaApp:Photos</Category>
   <WebUI>http://[IP]:[PORT:8000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Saetron/unRAID-CA-templates/refs/heads/main/templates/shimmie2/shimmie2.xml</TemplateURL>

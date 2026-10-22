@@ -8,7 +8,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/197096-support-saetron-docker-templates/</Support>
   <Project>https://github.com/Drop-OSS/drop</Project>
-  <Overview>Drop is an open-source game distribution platform, similar to GameVault or Steam. It's designed to distribute and share DRM-free games quickly, all while being incredibly flexible, beautiful, and fast.</Overview>
+  <Overview>Drop is a self-hosted game distribution platform (similar to Steam or GameVault) designed to organize, store, and share your DRM-free game library. &#13;&#13;Note: This container requires a PostgreSQL database configured via the DATABASE_URL environment variable.</Overview>
   <Category>MediaApp:Other</Category>
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Saetron/unRAID-CA-templates/refs/heads/main/templates/drop-oss/drop-oss.xml</TemplateURL>

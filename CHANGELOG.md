@@ -3,6 +3,7 @@
 - Removed pre-commit configuration and workflow
 - Added GitHub Actions workflow and XSD/Python validators for Unraid Community Applications XML templates
 - Updated `README.md` and added `AGENTS.md`
+- Improved template Overviews for Codex, Drop-OSS, and Shimmie2
 ### 2026.07.20
 - Added Drop OSS & Codex
 ### 2026.07.18
