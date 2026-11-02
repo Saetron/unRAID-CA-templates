@@ -1,3 +1,8 @@
+### 2026.11.02
+- Added Manyfold-Solo template and local application icon
+- Updated `README.md` with Manyfold-Solo entry
+- Expanded Manyfold-Solo overview with solo deployment details and setup instructions
+
 ### 2026.10.22
 - Updated Drop OSS version
 - Removed pre-commit configuration and workflow

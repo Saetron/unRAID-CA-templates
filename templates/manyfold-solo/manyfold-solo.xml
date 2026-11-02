@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Manyfold-Solo</Name>
+  <Repository>ghcr.io/manyfold3d/manyfold-solo</Repository>
+  <Registry>https://github.com/manyfold3d/manyfold/pkgs/container/manyfold-solo</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/197096-support-saetron-docker-templates/</Support>
+  <Project>https://github.com/manyfold3d/manyfold</Project>
+  <Overview>Manyfold is an open-source, self-hosted digital asset manager specifically designed for organizing, previewing, and managing 3D model collections (such as STL, OBJ, and 3MF files) for 3D printing.&#13;&#13;This Manyfold-Solo template deploys the all-in-one standalone container containing an integrated SQLite database and background workers, requiring no external PostgreSQL or Redis dependencies.&#13;&#13;Setup Note: Set SECRET_KEY_BASE to a 64-byte random hex string (generated with: openssl rand -hex 64) before starting the container to ensure session security.</Overview>
+  <Category>Tools:Utilities Other:</Category>
+  <WebUI>http://[IP]:[PORT:3214]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Saetron/unRAID-CA-templates/refs/heads/main/templates/manyfold-solo/manyfold-solo.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Saetron/unRAID-CA-templates/refs/heads/main/templates/manyfold-solo/manyfold-solo.png</Icon>
+  <Config Name="WebUI" Target="3214" Default="3214" Mode="tcp" Description="Port for web frontend" Type="Port" Display="always" Required="true" Mask="false">3214</Config>
+  <Config Name="Libraries" Target="/libraries" Default="" Mode="rw" Description="Location of your 3D model libraries." Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="SECRET_KEY_BASE" Target="SECRET_KEY_BASE" Default="" Mode="" Description="openssl rand -hex 64" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/manyfold" Mode="rw" Description="Persistent storage for application configuration data." Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/manyfold</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container user ID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container group ID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="" Description="Container file creation mask" Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
+</Container>
