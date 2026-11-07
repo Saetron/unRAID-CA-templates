@@ -1,3 +1,7 @@
+### 2026.11.07
+- Added FilaMan template and local application icon
+- Updated `README.md` with FilaMan entry
+
 ### 2026.11.02
 - Added Manyfold-Solo template and local application icon
 - Updated `README.md` with Manyfold-Solo entry

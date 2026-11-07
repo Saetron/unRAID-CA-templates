@@ -8,6 +8,7 @@ Docker container templates for Unraid's **Community Applications** (CA) app stor
 | :--- | :--- | :--- |
 | **[Codex](templates/codex/codex.xml)** | `MediaApp:Books` | Web server comic book browser and reader. |
 | **[Drop-OSS](templates/drop-oss/drop-oss.xml)** | `MediaApp:Other` | Open-source DRM-free game distribution platform. |
+| **[FilaMan](templates/filaman/filaman.xml)** | `Tools:Utilities` | Self-hosted filament management system for 3D printing. |
 | **[Manyfold-Solo](templates/manyfold-solo/manyfold-solo.xml)** | `Tools:Utilities` | Self-hosted web application for managing 3D models and 3D printing assets. |
 | **[Shimmie2](templates/shimmie2/shimmie2.xml)** | `MediaApp:Photos` | Lightweight, tag-based "Booru" style image gallery engine. |
 
